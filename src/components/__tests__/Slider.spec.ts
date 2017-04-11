@@ -65,6 +65,14 @@ describe("Slider", () => {
         expect(RcSliderComponent.props().value).toBe(sliderProps.value);
     });
 
+    it("renders an alert when an alert message is specified", () => {
+        sliderProps.alertMessage = "This is an alert";
+        slider = renderSlider(sliderProps);
+        const alert = slider.find(Alert);
+
+        expect(alert.props().message).toBe(sliderProps.alertMessage);
+    });
+
     it("without a value renders with the calculated value", () => {
         sliderProps.value = null;
         const RcSliderComponent = renderSlider(sliderProps).find(RcSlider);
