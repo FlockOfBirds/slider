@@ -11,7 +11,7 @@ const widgetConfig = {
         libraryTarget: "umd"
     },
     resolve: {
-        extensions: [ ".ts", ".js" ],
+        extensions: [ ".ts", ".d.ts", ".js" ],
         alias: {
             "tests": path.resolve(__dirname, "./tests")
         }

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8" ?>
-<widget id="com.mendix.widget.custom.slider.Slider" needsEntityContext="true" offlineCapable="true" xmlns="http://www.mendix.com/widget/1.0/">
+<widget id="com.mendix.widget.custom.slider.Slider" needsEntityContext="true" offlineCapable="true" pluginWidget="true" xmlns="http://www.mendix.com/widget/1.0/">
     <name>Slider</name>
     <description>Change a number value using a slider</description>
     <icon>
@@ -45,17 +45,10 @@
                 <enumerationValue key="never">Never</enumerationValue>
             </enumerationValues>
         </property>
-        <property key="onChangeMicroflow" type="microflow" required="false">
-            <caption>On change microflow</caption>
+        <property key="onChangeAction" type="action" required="false">
+            <caption>On change action</caption>
             <category>Events</category>
-            <description>Called when the slider is clicked or changed</description>
-            <returnType type="Void"/>
-        </property>
-        <property key="onChangeNanoflow" type="nanoflow" required="false">
-            <caption>On change nanoflow</caption>
-            <category>Events</category>
-            <description>Called when the slider is clicked or changed</description>
-            <returnType type="Void" />
+            <description>Action to trigger when the slider is clicked or changed</description>
         </property>
         <property key="noOfMarkers" type="integer" defaultValue="2">
             <caption>Number of markers</caption>

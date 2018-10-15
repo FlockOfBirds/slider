@@ -1,6 +1,6 @@
 import { Component, createElement } from "react";
 import { Slider, SliderProps } from "./components/Slider";
-import SliderContainer, { SliderContainerProps } from "./components/SliderContainer";
+import { SliderContainerProps } from "./components/SliderContainer";
 
 declare function require(name: string): string;
 
@@ -20,8 +20,8 @@ export class preview extends Component<SliderContainerProps, {}> {
             minValue: 0,
             noOfMarkers: props.noOfMarkers,
             stepValue: props.stepValue <= 0 ? 10 : props.stepValue,
-            style: SliderContainer.parseStyle(props.style),
-            tooltipText: props.tooltipText,
+            style: undefined,
+            tooltipText: props.tooltipText.value,
             value: 50
         };
     }

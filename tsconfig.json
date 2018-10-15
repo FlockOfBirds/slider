@@ -23,7 +23,7 @@
     "noImplicitReturns": true,
     "noImplicitThis": true,
     "noUnusedLocals": true,
-    "noUnusedParameters": true,
+    "noUnusedParameters": false,
     "skipLibCheck": false,
     "strictNullChecks": true
   },
