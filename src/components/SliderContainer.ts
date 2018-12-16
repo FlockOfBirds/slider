@@ -251,6 +251,9 @@ class SliderContainer extends Component<SliderContainerProps, SliderContainerSta
             if (value < minimumValue) {
                 message.push(`Value ${value} should be equal or greater than the minimum ${minimumValue}`);
             }
+            if (minimumValue > maximumValue) {
+                message.push(`Minimum ${minimumValue} should be less or equal to the maximum ${maximumValue}`);
+            }
         }
 
         return message.join(", ");

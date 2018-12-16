@@ -12,6 +12,7 @@ export class preview extends Component<SliderContainerProps, {}> {
 
     private transformProps(props: SliderContainerProps): SliderProps {
         return {
+            alertMessage: this.validateMinMax(props),
             bootstrapStyle: props.bootstrapStyle,
             className: props.class,
             decimalPlaces: props.decimalPlaces,
@@ -24,6 +25,16 @@ export class preview extends Component<SliderContainerProps, {}> {
             tooltipText: props.tooltipText,
             value: 50
         };
+    }
+
+    private validateMinMax(props: SliderContainerProps): string {
+        const { staticMinimumValue, staticMaximumValue } = props;
+
+        if (staticMinimumValue > staticMaximumValue) {
+            return `Minimum ${staticMinimumValue} should be less or equal to the maximum ${staticMaximumValue}`;
+        }
+
+        return "";
     }
 }
 
